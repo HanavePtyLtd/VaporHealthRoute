@@ -3,6 +3,7 @@
 
 import Vapor
 import SQLKit
+import Fluent
 
 struct HealthResponse: Content {
     let status: String

@@ -19,7 +19,7 @@ let package = Package(
     ],
     dependencies: [
         .package(url: "https://github.com/vapor/vapor.git", from: "4.0.0"),
-        .package(url: "https://github.com/vapor/sql-kit.git", from: "3.29.3")
+        .package(url: "https://github.com/vapor/fluent.git", from: "4.8.0"),
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
@@ -27,7 +27,7 @@ let package = Package(
         .target(
             name: "HealthCheckRoute",
             dependencies: [
-                .product(name: "SQLKit", package: "sql-kit"),
+                .product(name: "Fluent", package: "fluent"),
                 .product(name: "Vapor", package: "vapor")
             ])
     ]
