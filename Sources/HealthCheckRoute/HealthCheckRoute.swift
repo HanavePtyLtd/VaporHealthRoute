@@ -14,7 +14,7 @@ struct HealthResponse: Content {
 public extension Application {
     func addhealth() {
         
-        let healthPath = Environment.get("HEALTH_PATH") ?? "/health"
+        let healthPath = Environment.get("HEALTH_PATH") ?? "health"
         let serviceName = Environment.get("APP_NAME") ?? "unknown"
         let version = Environment.get("VERSION") ?? "unknown"
         let failure = HealthResponse(status: "degraded", service: serviceName, version: version)
